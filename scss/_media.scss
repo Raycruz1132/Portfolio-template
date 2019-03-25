@@ -11,7 +11,7 @@
 
 //Desktop & Laptops
 @include MediaLg {
-    .projectsP{
+    .projects{
         grid-template-columns: repeat(3, 1fr);
     }
 }
