@@ -293,4 +293,6 @@ main {
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .lg-heading {
+    font-size: 1rem; } }
