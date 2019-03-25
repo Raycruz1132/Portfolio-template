@@ -22,6 +22,7 @@
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
+        -webkit-transform: rotate(45deg) translate(5px, 5px);
         transform: rotate(45deg) translate(5px, 5px);
       }
       // Line 2 - Hide
@@ -30,6 +31,7 @@
       }
       // Line 3 - Rotate
       &:nth-child(3) {
+        -webkit-transform: rotate(-45deg) translate(7px, -6px);
         transform: rotate(-45deg) translate(7px, -6px);
       }
     }
@@ -66,11 +68,13 @@
     padding: 0;
     background: darken($primary-color, 5);
     list-style-type: none;
+    -webkit-ransform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
     @include easeOut;
 
     &.show {
       //Slide in top
+      -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
     }
   }
@@ -78,6 +82,7 @@
   //Branding Side
   &-branding {
     background: $primary-color;
+    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
 
@@ -95,12 +100,14 @@
     }
   }
 
-  .nav-item{
+.nav-item{
+      -webkit-transform: translate3d(600px, 0, 0);
       transform: translate3d(600px, 0, 0);
       @include easeOut;
 
       &.show{
           //Slide in from the right
+          -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
       }
 
@@ -129,6 +136,7 @@
 // Delay each nav item slide by 0.1s 
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}){
+        -webkit-transition-delay: $x * 0.15s;
         transition-delay: $x * 0.15s;
     }
 }
